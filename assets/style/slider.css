@@ -1,0 +1,99 @@
+/* CSS untuk animasi slider */
+#hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-item {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Tampilkan slide aktif */
+  .hero-item.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .scroll-container {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mengatur tombol di sisi kiri dan kanan */
+}
+
+.scroll-button {
+    background-color: var(--second-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Mengatur tata letak horizontal-scroll seperti yang telah Anda atur sebelumnya */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 40px 40px;
+    gap: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    align-items: start;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+  /* ... CSS yang lain ... */
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #252534;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown container (div) */
+.sort-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333445;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.sort-option {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+/* Change color of links on hover */
+.sort-option:hover {
+    background-color: #5b5c71;
+}
+
+/* Show the dropdown content when the dropdown button is clicked */
+.sort-dropdown:hover .dropdown-content {
+    display: block;
+}

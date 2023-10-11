@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/slider.css">
+   
+    
+    <title>ArsMovie</title>
+</head>
+<body>
+  <nav>
+    <div id="logo"><h1>ArsMovie</h1></div>
+      <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#project">TV Show</a>
+          </li>
+          <li>
+            <a href="#contact">Movie</a>
+          </li>
+          <li>
+            <a href="#contact">My List</a>
+          </li>
+        </ul>
+      <div id="search-bar"><input type="text"><button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #252534;"></i></button></div>
+      <div id="account"><i class="fa-solid fa-user fa-xl" style="color: #f5f5f5;"></i></div>
+  </nav>
+  <header>
+        <div id="hero">
+          <div class="hero-item">
+
+            <img src="assets/img/raya-and-the-last-dragon-poster-uhdpaper.com-4K-8.2373.png"class="fadeIn" alt="">
+            <div class="caption-wrapper">
+              <p class="genre">Animation | Family | Fantasy | Action | Adventure
+              </p>
+              <h1 class="title fade-in">Raya and the Last Dragon</h1>
+              <p class="description">Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity.</p>
+              <button class="watch-button"><i class="fa-solid fa-play" style="color: #ffffff;"></i>   Watch Now</button>
+              <button class="add-button"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>    Add List</button>
+           
+            </div>
+          </div>
+
+          <div class="hero-item">
+
+            <img src="assets/img/openheimer.png" class="fadeIn" alt="">
+            <div class="caption-wrapper fade-in">
+              <p class="genre">Drama | Sejarah</p>
+              <h1 class="title">Oppenheimer</h1>
+              <p class="description">The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II.
+               </p>
+              <button class="watch-button"><i class="fa-solid fa-play" style="color: #ffffff;"></i>   Watch Now</button>
+              <button class="add-button"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>    Add List</button>
+            </div>
+          </div>
+
+          <div class="hero-item">
+
+            <img src="assets/img/spiderman.png" class="fadeIn" alt="">
+            <div class="caption-wrapper fade-in">
+              <p class="genre">Animation | Action | Adventure</p>
+                <h1 class="title">Spider-Man: Across the Spider-Verse</h1>
+                <p class="description">After reuniting with Gwen Stacy, Brooklyn’s full-time,  Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society,</p>
+                <button class="watch-button"><i class="fa-solid fa-play" style="color: #ffffff;"></i>   Watch Now</button>
+                <button class="add-button"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>    Add List</button>
+             
+            </div>
+          </div>
+          </div>
+          
+  </header>
+  <main>
+    <div class="trending-list">
+      <h2>Trending This Week</h2>
+      <div class="scroll-container">
+        <button id="prevBtn" class="scroll-button"><i class="fa-solid fa-chevron-left fa-2xl" style="color: #ffffff;"></i></button>
+        <div id="movie-data" class="horizontal-scroll"></div>
+        <button id="nextBtn" class="scroll-button"><i class="fa-solid fa-chevron-right fa-2xl" style="color: #ffffff;"></i></button>
+    </div>
+    </div>
+    <div class="discover-list">
+      <h3>Discover more Movie</h3>
+      <div class="sort-dropdown">
+        <button class="dropbtn">Sort by</button>
+        <div class="dropdown-content">
+            <a href="#" class="sort-option">Alphabet</a>
+            <a href="#" class="sort-option">Latest</a>
+            <a href="#" class="sort-option">Newest</a>
+            <a href="#" class="sort-option">Popularity</a>
+            <a href="#" class="sort-option">Rating</a>
+        </div>
+    </div>
+      <div id="more-movie" class="card-container"></div>
+    </div>
+  </main>
+    <script src="https://kit.fontawesome.com/0112f5dde7.js" crossorigin="anonymous"></script>
+    <script src="./dist/bundle.js"></script>  
+    <script src="assets/script/slider.js"></script>
+</body>
+</html>
