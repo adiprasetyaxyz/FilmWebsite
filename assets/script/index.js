@@ -72,5 +72,11 @@ tvBtn.addEventListener('click', (e) => {
     
 });
 
-   
+const pageButton = document.getElementsByClassName('buttonPage');
+for (const pageNumber of pageButton) {
+    pageButton[pageNumber].addEventListener('click', (e) =>{
+        console.log(pageNumber);
+    })
+}
+
 
