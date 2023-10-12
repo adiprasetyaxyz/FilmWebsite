@@ -1,7 +1,8 @@
+import { resetSearch } from './search';
+let page = "1"; 
 function moreTvList(){
     // Mengambil elemen di dalam halaman HTML
     const moreTvElement = document.getElementById("more-tv");
-    let page = "1";  // Ubah sesuai dengan halaman yang Anda inginkan
     
     const axios = require('axios');
     
@@ -41,5 +42,29 @@ function moreTvList(){
         console.error(error);
       });
 }
+
+function changePageTv() {
+    //membuat event click
+const pageButton = document.getElementsByClassName('buttonPage');
+for (const pageNumber of pageButton) {
+    pageNumber.addEventListener('click', (e) => {
+        const clickedPageNumber = pageNumber.value; // Mendapatkan nilai (nomor halaman) dari tombol yang diklik
+        
+          // Menghapus kelas 'active-page' dari semua tombol halaman
+          for (const button of pageButton) {
+           button.classList.remove('active-page');
+       }
+        // Menambahkan kelas 'active-page' ke tombol halaman yang aktif
+        pageNumber.classList.add('active-page');
+        
+      
+   // Setel halaman saat ini
+   page = clickedPageNumber;
+        moreTvList();
+        resetSearch();
+    });
+}
+
+}
     
-export default moreTvList;
+export { moreTvList, changePageTv};

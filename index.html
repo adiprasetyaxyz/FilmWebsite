@@ -11,22 +11,27 @@
 </head>
 <body>
   <nav>
-    <div id="logo"><h1>ArsMovie</h1></div>
+    <div id="logo"><h1><span>Ars</span>Movie</h1></div>
       <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="#project">TV Show</a>
+            <a href="#movie">Movie</a>
           </li>
           <li>
-            <a href="#contact">Movie</a>
+            <a href="#movie">TV Show</a>
           </li>
           <li>
-            <a href="#contact">My List</a>
+            <a href="#">My List</a>
           </li>
         </ul>
-      <div id="search-bar"><input type="text"><button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #252534;"></i></button></div>
+      <div id="search-bar">
+        <form id="form">
+          <input type="text" id="search-input">
+          <button id="search-button" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #252534;"></i></button>
+        </form>
+      </div>
       <div id="account"><i class="fa-solid fa-user fa-xl" style="color: #f5f5f5;"></i></div>
   </nav>
   <header>
@@ -74,7 +79,7 @@
           
   </header>
   <main>
-    <div class="trending-list">
+    <div class="trending-list" id="movie">
       <h3><i class="fa-solid fa-arrow-trend-up fa-sm" style="color: #ffffff;"></i> Trending This Week</h3 >
         <hr width="90%"  color="white">
         <div class="scroll-container">
@@ -101,7 +106,9 @@
       </div>
     </div>
     <hr width="90%"  color="white">
-      <div id="more-movie" class="card-container"></div>
+    <div id="search-keyword"></div>
+    <div id= "search-data" class="card-container"></div>
+    <div id="more-movie" class="card-container"></div>
     </div>
     <div id="page-button"></div>
   </main>

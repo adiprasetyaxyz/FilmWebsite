@@ -1,11 +1,16 @@
 import makeBtnPage from "./page";
 import trendingMovieList from "./trendingMovie";
-import moreMovieList from "./movie";
-import moreTvList from "./tvShow";
+import { moreMovieList, changePage} from "./movie"
+import {moreTvList, changePageTv} from "./tvShow";
+import {performSearch, resetSearch} from "./search";
 
 trendingMovieList();
 moreMovieList();
 makeBtnPage();
+changePage();
+changePageTv();
+
+
 
 const idList = document.getElementById('discover-list')
 // movieBtn.addEventListener('click', (e) => {
@@ -36,6 +41,7 @@ movieBtn.addEventListener('click', (e) => {
     
     // Panggil fungsi moreTvList
     moreMovieList();
+    resetSearch();
 
    
 });
@@ -69,14 +75,21 @@ tvBtn.addEventListener('click', (e) => {
 
     // Panggil fungsi moreTvList
     moreTvList();
+    resetSearch();
     
 });
 
-const pageButton = document.getElementsByClassName('buttonPage');
-for (const pageNumber of pageButton) {
-    pageButton[pageNumber].addEventListener('click', (e) =>{
-        console.log(pageNumber);
-    })
-}
+
+// Seleksi elemen input dan tombol pencarian
+
+const searchButton = document.getElementById("search-button");
+const searchForm = document.getElementById("form"); // Tambahan seleksi elemen form
+
+// Tambahkan event listener untuk pencarian
+searchButton.addEventListener("click", performSearch);
+searchForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Mencegah form dari pengiriman default
+    performSearch();
+});
 
 

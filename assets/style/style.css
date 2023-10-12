@@ -264,12 +264,18 @@ gap: 40px;
     position: absolute;
 
 }
+.active-page{
+    background-color: var(--accent-color);
+}
 
 footer {
     height: 100px;
     background-color: #333445;
 }
 
+#search-keyword {
+    text-align: center;
+}
 
 
 

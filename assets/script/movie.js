@@ -1,9 +1,11 @@
 
+import { resetSearch } from './search';
+let page = 1;
 
 function moreMovieList(){
     // Mengambil elemen di dalam halaman HTML
     const moreMovieElement = document.getElementById("more-movie");
-    const page = 1;
+   
    
     
     const axios = require('axios');
@@ -21,8 +23,7 @@ function moreMovieList(){
       .request(options)
       .then(function (response) {
         // Data film dari API
-        const movies = response.data.results; // Ubah sesuai dengan struktur data API yang Anda gunakan
-        // Membuat string HTML untuk menampilkan data film
+        const movies = response.data.results; 
         const moviesHTML = movies.map((movie) => {
           return `
             <div class="card">
@@ -49,7 +50,28 @@ function moreMovieList(){
     
     }
 
+function changePage() {
+     //membuat event click
+ const pageButton = document.getElementsByClassName('buttonPage');
+ for (const pageNumber of pageButton) {
+     pageNumber.addEventListener('click', (e) => {
+         const clickedPageNumber = pageNumber.value; // Mendapatkan nilai (nomor halaman) dari tombol yang diklik
+         
+           // Menghapus kelas 'active-page' dari semua tombol halaman
+           for (const button of pageButton) {
+            button.classList.remove('active-page');
+        }
+         // Menambahkan kelas 'active-page' ke tombol halaman yang aktif
+         pageNumber.classList.add('active-page');
+         
+       
+    // Setel halaman saat ini
+    page = clickedPageNumber;
+         moreMovieList()
+         resetSearch()
+     });
+ }
 
+}
     
-    export default moreMovieList;
-    
+    export { moreMovieList, changePage};
