@@ -42,16 +42,18 @@ function prevSlide() {
 setInterval(nextSlide, 5000);
 
 //membuat tombol untuk slider popular list
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const horizontalScroll = document.querySelector('.horizontal-scroll');
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const movieData = document.getElementById("movie-data");
+const scrollDistance = 200; // Jarak pengguliran setiap kali tombol ditekan
 
-  prevBtn.addEventListener('click', () => {
-    horizontalScroll.scrollLeft -= 300; // Sesuaikan jumlah geseran horizontal yang Anda inginkan
-  });
+// Fungsi untuk menggulir ke kanan
+nextBtn.addEventListener("click", () => {
+    movieData.scrollLeft += scrollDistance;
+});
 
-  nextBtn.addEventListener('click', () => {
-    horizontalScroll.scrollLeft += 300; // Sesuaikan jumlah geseran horizontal yang Anda inginkan
-  });
-
+// Fungsi untuk menggulir ke kiri
+prevBtn.addEventListener("click", () => {
+    movieData.scrollLeft -= scrollDistance;
+});
 

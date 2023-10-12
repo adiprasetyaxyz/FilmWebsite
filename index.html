@@ -75,30 +75,39 @@
   </header>
   <main>
     <div class="trending-list">
-      <h2>Trending This Week</h2>
-      <div class="scroll-container">
+      <h3><i class="fa-solid fa-arrow-trend-up fa-sm" style="color: #ffffff;"></i> Trending This Week</h3 >
+        <hr width="90%"  color="white">
+        <div class="scroll-container">
         <button id="prevBtn" class="scroll-button"><i class="fa-solid fa-chevron-left fa-2xl" style="color: #ffffff;"></i></button>
         <div id="movie-data" class="horizontal-scroll"></div>
         <button id="nextBtn" class="scroll-button"><i class="fa-solid fa-chevron-right fa-2xl" style="color: #ffffff;"></i></button>
     </div>
     </div>
-    <div class="discover-list">
-      <h3>Discover more Movie</h3>
-      <div class="sort-dropdown">
-        <button class="dropbtn">Sort by</button>
-        <div class="dropdown-content">
+    <div class="discover-list" id="discover-list">
+      <div class="menu">
+        <div class="channel">
+      <h3><button id="movie-btn" ><i class="fa-solid fa-clapperboard fa-sm" style="color: #ffffff;"></i> Movie<span id="active"></span></button>   </h3>
+      <h3><button id="tv-btn" ><i class="fa-solid fa-tv fa-sm" style="color: #ffffff;"></i> TV Show</button></h3>
+        </div>
+        <div class="sort-dropdown">
+          <button class="dropbtn">Sort by</button>
+          <div class="dropdown-content">
             <a href="#" class="sort-option">Alphabet</a>
             <a href="#" class="sort-option">Latest</a>
             <a href="#" class="sort-option">Newest</a>
             <a href="#" class="sort-option">Popularity</a>
             <a href="#" class="sort-option">Rating</a>
         </div>
+      </div>
     </div>
+    <hr width="90%"  color="white">
       <div id="more-movie" class="card-container"></div>
     </div>
+    <div id="page-button"></div>
   </main>
     <script src="https://kit.fontawesome.com/0112f5dde7.js" crossorigin="anonymous"></script>
     <script src="./dist/bundle.js"></script>  
     <script src="assets/script/slider.js"></script>
 </body>
+<footer></footer>
 </html>

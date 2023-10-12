@@ -25,7 +25,7 @@ axios
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
         <p class="overview">${movie.overview}</p>
         <div class="title-card">
-        <p class="release-date">${movie.release_date}</p>
+        <p class="release-date"><i class="fa-solid fa-calendar-days fa-sm" style="color: #ffffff;"></i>${movie.release_date}</p>
         <span class="rating"><i class="fa-solid fa-star fa-sm" style="color: #e6b400;"></i>${movie.vote_average}</span>
         </div>
         <h2>${movie.title}</h2>
