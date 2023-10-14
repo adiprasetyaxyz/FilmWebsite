@@ -1,4 +1,5 @@
 import { resetSearch } from './search';
+import { scrollToMovie } from './search';
 let page = "1"; 
 function moreTvList(){
     // Mengambil elemen di dalam halaman HTML
@@ -19,16 +20,15 @@ function moreTvList(){
       .request(options)
       .then(function (response) {
         // Data TV Show dari API
-        const tvShows = response.data.results; // Ubah sesuai dengan struktur data API yang Anda gunakan
-        // Membuat string HTML untuk menampilkan data TV Show
+        const tvShows = response.data.results; 
         const tvShowHTML = tvShows.map((tvShow) => {
           return `
             <div class="card">
             <img src="https://image.tmdb.org/t/p/w500${tvShow.poster_path}" alt="${tvShow.name}">
             <p class="overview">${tvShow.overview}</p>
             <div class="title-card">
-            <p class="release-date"><i class="fa-solid fa-calendar-days fa-sm" style="color: #ffffff;"></i>${tvShow.first_air_date}</p>
-            <span class="rating"><i class="fa-solid fa-star fa-sm" style="color: #e6b400;"></i>${tvShow.vote_average}</span>
+            <p class="release-date"><i class="fa-solid fa-calendar-days fa-sm" style="color: #ffffff;"></i> ${tvShow.first_air_date}</p>
+            <span class="rating"><i class="fa-solid fa-star fa-sm" style="color: #e6b400;"></i> ${tvShow.vote_average}</span>
             </div>
             <h2>${tvShow.name}</h2>
             </div>
@@ -48,7 +48,7 @@ function changePageTv() {
 const pageButton = document.getElementsByClassName('buttonPage');
 for (const pageNumber of pageButton) {
     pageNumber.addEventListener('click', (e) => {
-        const clickedPageNumber = pageNumber.value; // Mendapatkan nilai (nomor halaman) dari tombol yang diklik
+        const clickedPageNumber = pageNumber.value; 
         
           // Menghapus kelas 'active-page' dari semua tombol halaman
           for (const button of pageButton) {
@@ -62,6 +62,7 @@ for (const pageNumber of pageButton) {
    page = clickedPageNumber;
         moreTvList();
         resetSearch();
+        scrollToMovie();
     });
 }
 

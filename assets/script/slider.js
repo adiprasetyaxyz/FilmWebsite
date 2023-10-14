@@ -1,10 +1,13 @@
+
+
+
+function sliderHero() {
+    let currentSlide = 0;  
+
 // Simpan elemen-elemen dalam variabel
 const hero = document.getElementById("hero");
 const slides = document.querySelectorAll(".hero-item");
-
-let currentSlide = 0; // Menyimpan indeks slide saat ini
-
-// Fungsi untuk menampilkan slide yang sesuai
+ 
 function showSlide(index) {
     slides.forEach((slide, i) => {
         if (i === index) {
@@ -38,22 +41,8 @@ function prevSlide() {
 
 
 
-// Otomatis ganti slide setiap beberapa detik (misalnya, 5 detik)
+// Otomatis ganti slide setiap beberapa detik  
 setInterval(nextSlide, 5000);
 
-//membuat tombol untuk slider popular list
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const movieData = document.getElementById("movie-data");
-const scrollDistance = 200; // Jarak pengguliran setiap kali tombol ditekan
-
-// Fungsi untuk menggulir ke kanan
-nextBtn.addEventListener("click", () => {
-    movieData.scrollLeft += scrollDistance;
-});
-
-// Fungsi untuk menggulir ke kiri
-prevBtn.addEventListener("click", () => {
-    movieData.scrollLeft -= scrollDistance;
-});
-
+}
+export default sliderHero;

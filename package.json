@@ -1,0 +1,29 @@
+{
+  "name": "filmwebsite",
+  "version": "1.0.0",
+  "description": "Submission Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start-dev": "webpack serve"
+  },
+  "author": "Adi Prasetyawan",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "http-server": "^14.1.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "axios": "^1.5.1",
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1"
+  }
+}

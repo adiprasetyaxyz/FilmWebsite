@@ -3,17 +3,22 @@ const searchInput = document.getElementById("search-input");
 const searchKeyword = document.getElementById('search-keyword')
 // Fungsi untuk menjalankan pencarian
 function performSearch() {
-    keyword = searchInput.value; // Mengambil kata kunci pencarian dari input
-
+    keyword = searchInput.value; 
     searchKeyword.innerText = `${keyword}`
-
-    searchMovie(); // Memanggil fungsi searchMovie untuk mencari hasil pencarian
+    scrollToMovie();
+    searchMovie();
 }
+
 //fungsi untuk mereset pencarian
 function resetSearch(){
     searchInput.value = '';
     searchKeyword.innerText = ''
     performSearch()
+}
+
+function scrollToMovie() {
+    const movieSection = document.getElementById("discover-list");
+    movieSection.scrollIntoView({ behavior: "smooth" });
 }
 
 function searchMovie() {
@@ -57,4 +62,4 @@ function searchMovie() {
 }
 
 
-export { performSearch,resetSearch };
+export { performSearch,resetSearch, scrollToMovie };

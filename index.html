@@ -2,43 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/slider.css">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     
     <title>ArsMovie</title>
 </head>
 <body>
-  <nav>
-    <div id="logo"><h1><span>Ars</span>Movie</h1></div>
-      <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#movie">Movie</a>
-          </li>
-          <li>
-            <a href="#movie">TV Show</a>
-          </li>
-          <li>
-            <a href="#">My List</a>
-          </li>
-        </ul>
-      <div id="search-bar">
-        <form id="form">
-          <input type="text" id="search-input">
-          <button id="search-button" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #252534;"></i></button>
-        </form>
-      </div>
-      <div id="account"><i class="fa-solid fa-user fa-xl" style="color: #f5f5f5;"></i></div>
-  </nav>
+  
+  
   <header>
+    <nav-bar></nav-bar>
+
         <div id="hero">
           <div class="hero-item">
 
-            <img src="assets/img/raya-and-the-last-dragon-poster-uhdpaper.com-4K-8.2373.png"class="fadeIn" alt="">
+            <img src="./assets/img/raya-and-the-last-dragon-poster-uhdpaper.com-4K-8.2373.png" class="fadeIn">
             <div class="caption-wrapper">
               <p class="genre">Animation | Family | Fantasy | Action | Adventure
               </p>
@@ -52,7 +29,7 @@
 
           <div class="hero-item">
 
-            <img src="assets/img/openheimer.png" class="fadeIn" alt="">
+            <img src="./assets/img/openheimer.png" class="fadeIn" >
             <div class="caption-wrapper fade-in">
               <p class="genre">Drama | Sejarah</p>
               <h1 class="title">Oppenheimer</h1>
@@ -64,8 +41,7 @@
           </div>
 
           <div class="hero-item">
-
-            <img src="assets/img/spiderman.png" class="fadeIn" alt="">
+            <img src="./assets/img/spiderman.png" class="fadeIn" >
             <div class="caption-wrapper fade-in">
               <p class="genre">Animation | Action | Adventure</p>
                 <h1 class="title">Spider-Man: Across the Spider-Verse</h1>
@@ -76,7 +52,7 @@
             </div>
           </div>
           </div>
-          
+      
   </header>
   <main>
     <div class="trending-list" id="movie">
@@ -89,21 +65,27 @@
     </div>
     </div>
     <div class="discover-list" id="discover-list">
-      <div class="menu">
+      <div class="movie-menu">
         <div class="channel">
       <h3><button id="movie-btn" ><i class="fa-solid fa-clapperboard fa-sm" style="color: #ffffff;"></i> Movie<span id="active"></span></button>   </h3>
       <h3><button id="tv-btn" ><i class="fa-solid fa-tv fa-sm" style="color: #ffffff;"></i> TV Show</button></h3>
-        </div>
-        <div class="sort-dropdown">
-          <button class="dropbtn">Sort by</button>
-          <div class="dropdown-content">
-            <a href="#" class="sort-option">Alphabet</a>
-            <a href="#" class="sort-option">Latest</a>
-            <a href="#" class="sort-option">Newest</a>
-            <a href="#" class="sort-option">Popularity</a>
-            <a href="#" class="sort-option">Rating</a>
-        </div>
+      <div class="sort-dropdown">
+        <button class="dropbtn">Sort <i class="fa-solid fa-sort fa-sm" style="color: #ffffff;"></i></button>
+        <div class="dropdown-content">
+          <a href="#" class="sort-option">Alphabet</a>
+          <a href="#" class="sort-option">Latest</a>
+          <a href="#" class="sort-option">Newest</a>
+          <a href="#" class="sort-option">Popularity</a>
+          <a href="#" class="sort-option">Rating</a>
       </div>
+    </div></div>
+        <div id="search-bar">
+          <form id="form">
+            
+            <input type="text" id="search-input">
+            <button  id="search-button" type="submit" href="#discover-list"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #252534;"></i></button>
+          </form>
+        </div>
     </div>
     <hr width="90%"  color="white">
     <div id="search-keyword"></div>
@@ -113,8 +95,7 @@
     <div id="page-button"></div>
   </main>
     <script src="https://kit.fontawesome.com/0112f5dde7.js" crossorigin="anonymous"></script>
-    <script src="./dist/bundle.js"></script>  
-    <script src="assets/script/slider.js"></script>
+   
 </body>
-<footer></footer>
+<footer><p>Adi Prasetyawan 2023 &copy; Dicoding Submission </p></footer>
 </html>
