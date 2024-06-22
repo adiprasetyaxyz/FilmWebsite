@@ -1,4 +1,4 @@
-function trendingMovieList(){
+const trendingMovieList = () => {
 // Mengambil elemen di dalam halaman HTML
 const movieDataElement = document.getElementById("movie-data");
 
@@ -15,7 +15,7 @@ const options = {
 
 axios
   .request(options)
-  .then(function (response) {
+  .then((response) => {
     // Data film dari API
     const movies = response.data.results; 
     const moviesHTML = movies.map((movie) => {
@@ -36,11 +36,11 @@ axios
     // Menyusun string HTML ke dalam elemen "movie-data"
     movieDataElement.innerHTML = moviesHTML.join("");
   })
-  .catch(function (error) {
+  .catch((error) => {
     console.error(error);
   });
 }
-function buttonLeftRight(){
+const buttonLeftRight = () => {
 //membuat tombol untuk slider popular list
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");

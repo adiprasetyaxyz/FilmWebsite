@@ -2,7 +2,7 @@ let keyword = '';
 const searchInput = document.getElementById("search-input");
 const searchKeyword = document.getElementById('search-keyword')
 // Fungsi untuk menjalankan pencarian
-function performSearch() {
+const performSearch = () => {
     keyword = searchInput.value; 
     searchKeyword.innerText = `${keyword}`
     scrollToMovie();
@@ -10,18 +10,18 @@ function performSearch() {
 }
 
 //fungsi untuk mereset pencarian
-function resetSearch(){
+const resetSearch = () => {
     searchInput.value = '';
     searchKeyword.innerText = ''
     performSearch()
 }
 
-function scrollToMovie() {
+const scrollToMovie = () => {
     const movieSection = document.getElementById("discover-list");
     movieSection.scrollIntoView({ behavior: "smooth" });
 }
 
-function searchMovie() {
+const searchMovie = () => {
     const axios = require('axios');
     
     const options = {
@@ -35,7 +35,7 @@ function searchMovie() {
     
     axios
         .request(options)
-        .then(function (response) {
+        .then((response) => {
             // Data film dari API
             const searchs = response.data.results; 
             const searchsHTML = searchs.map((search) => {
@@ -56,7 +56,7 @@ function searchMovie() {
             const searchElement = document.getElementById("search-data");
             searchElement.innerHTML = searchsHTML.join("");
         })
-        .catch(function (error) {
+        .catch((error) => {
             console.error(error);
         });
 }

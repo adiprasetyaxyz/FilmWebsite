@@ -3,7 +3,7 @@ import { resetSearch } from './search';
 import { scrollToMovie } from './search';
 let page = 1;
 
-function moreMovieList(){
+const moreMovieList = () => {
     // Mengambil elemen di dalam halaman HTML
     const moreMovieElement = document.getElementById("more-movie");
    
@@ -22,7 +22,7 @@ function moreMovieList(){
     
     axios
       .request(options)
-      .then(function (response) {
+      .then((response) => {
         // Data film dari API
         const movies = response.data.results; 
         const moviesHTML = movies.map((movie) => {
@@ -45,13 +45,13 @@ function moreMovieList(){
         
         
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.error(error);
       });
     
     }
 
-function changePage() {
+  const changePage = () => {
      //membuat event click
  const pageButton = document.getElementsByClassName('buttonPage');
  for (const pageNumber of pageButton) {
